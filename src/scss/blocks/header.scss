@@ -1,179 +1,168 @@
 @use '../mixins/hover.scss' as *;
-@use '../mixins/responsive.scss' as*;
+@use '../mixins/responsive.scss' as *;
 
-.header{ 
-
-    @include responsive(laptop){
+.header {
+  @include responsive(laptop) {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 28px;
+    padding-inline: 24px;
+    margin-bottom: 112px;
+
+    @include responsive(laptop) {
+      width: 1297px;
     }
-   
+  }
 
+  &__image--menu {
+    width: 96px;
+    height: 16px;
 
-    &__menu{
-        display: flex; 
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding-top:28px ;
-        padding-inline: 24px;
-        margin-bottom: 112px;
-
-        @include responsive(laptop){
-            width: 1297px;
-        }
+    @include responsive(laptop) {
+      width: 240px;
+      height: 38px;
     }
+  }
 
-    &__image--menu{
-        width: 96px;
-        height: 16px;
+  &__button--menu {
+    color: #ff52c1;
+    font-weight: 400;
+    font-size: 9.4px;
+    padding: 5px 18px;
+    border-radius: 11px;
+    border: 1px solid #ff52c1;
 
-        @include responsive(laptop){
-            width:240px ;
-            height: 38px;
-        }
+    @include responsive(laptop) {
+      padding: 9px 31px;
+      border-radius: 20px;
+      font-size: 16px;
     }
-
-    &__button--menu{
-        color:#FF52C1;
-        font-weight: 400;
-        font-size: 9.40px;
-        padding: 5px 18px;
-        border-radius:11px ;
-        border: 1px solid #FF52C1;
-
-        @include responsive(laptop){
-            padding: 9px 31px;
-            border-radius: 20px;
-            font-size: 16px;
-           
-        }
-
+    @include hover {
+      color: #ff8ed7;
     }
+  }
 
-    &__title{
-        font-weight: 700;
-        font-size: 24px ;
-        line-height: 36px;
-        color: #00252E ;
-        text-align: center;
-        margin: 0;
-        margin-inline: 48px;
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #00252e;
+    text-align: center;
+    margin: 0;
+    margin-inline: 48px;
 
-        @include responsive(laptop){
-            font-size: 48px;
-            line-height: 72px;
-        }
-
+    @include responsive(laptop) {
+      font-size: 48px;
+      line-height: 72px;
     }
+  }
 
-    &__text{
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 21px;
-        color:#00252E ;
-        text-align: center;
-        margin-inline:40px ;
-        margin-bottom: 48px;
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #00252e;
+    text-align: center;
+    margin-inline: 40px;
+    margin-bottom: 48px;
 
-        @include responsive(laptop){
-            font-size: 20px;
-            line-height: 30px;
-            width: 600px;
-        }
+    @include responsive(laptop) {
+      font-size: 20px;
+      line-height: 30px;
+      width: 600px;
     }
+  }
 
-    &__button{
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 18px;
-        color: white;
-        background-color:#FF52C1 ;
-        padding: 11px 40px;
-        border-radius: 50px;
-        margin-inline: 88px;
-        
+  &__button {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+    background-color: #ff52c1;
+    padding: 11px 40px;
+    border-radius: 50px;
+    margin-inline: 88px;
 
-        @include responsive(laptop){
-            padding: 25px 100px;
-            font-size: 20px;
-        }
-        
-
+    @include responsive(laptop) {
+      padding: 25px 100px;
+      font-size: 20px;
     }
+  }
 
-    &__image{
-        width: 296px;
-        height: 209px;
-        margin-top:104px ;
-        margin-inline: auto;
+  &__image {
+    width: 296px;
+    height: 209px;
+    margin-top: 104px;
+    margin-inline: auto;
 
-        @include responsive(laptop){
-            width: 1016px;
-            height: 720px;
-        }
+    @include responsive(laptop) {
+      width: 1016px;
+      height: 720px;
     }
+  }
 
-    &__data{
-        display: flex; 
-        flex-direction: column;
-        align-items: start;
-        margin-top: 120px;
-        margin-inline:108px ;
+  &__data {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 120px;
+    margin-inline: 108px;
 
-        @include responsive(laptop){
-            display: flex;
-            flex-direction: row;
-            gap: 341px;
-        }
+    @include responsive(laptop) {
+      display: flex;
+      flex-direction: row;
+      gap: 341px;
     }
+  }
 
-    &__data--container{
-        margin-bottom: 88px ;
+  &__data--container {
+    margin-bottom: 88px;
 
-
-
-        @include responsive(laptop) {
-            display: flex;
-            flex-direction: column;
-        }
+    @include responsive(laptop) {
+      display: flex;
+      flex-direction: column;
     }
+  }
 
-    &__data--image{
-        width: 35px;
-        height: 35px;
+  &__data--image {
+    width: 35px;
+    height: 35px;
 
-        @include responsive(laptop){
-            width: 56px;
-            height: 56px;
-        }
+    @include responsive(laptop) {
+      width: 56px;
+      height: 56px;
     }
+  }
 
-    &__data--number{
-        font-weight:700 ;
-        font-size: 61px;
-        line-height: 91px;
-        color:#00252E ;
+  &__data--number {
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 91px;
+    color: #00252e;
 
-        @include responsive(laptop){
-            font-size: 96px;
-            line-height: 144px;
-
-        }
-        
+    @include responsive(laptop) {
+      font-size: 96px;
+      line-height: 144px;
     }
+  }
 
-    &__data--info{
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 23px;
-        color:#808E9A ;
+  &__data--info {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    color: #808e9a;
 
-        @include responsive(laptop){
-            font-size: 24px;
-            line-height: 36px;
-        }
-        
+    @include responsive(laptop) {
+      font-size: 24px;
+      line-height: 36px;
     }
+  }
 }
